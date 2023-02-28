@@ -7,7 +7,7 @@ function App() {
   setTimeout(()=>{
     setTest(true)
   },2000)
-  const [test2,setTest2] = useState(false)
+  const [test2,setTest2] = useState('')
   setTimeout(()=>{
     setTest(true)
   },2000)
@@ -20,8 +20,8 @@ function App() {
 <div className={test ? 'box1': 'box2'}>
 
 </div>
-<input type="text" placeholder='text..' onChange={(e=> setTest(e.target.value.trim()))} />
-<h1>{test.length ? 'bor' :'yoq'}</h1>
+<input type="text" placeholder='text..' onChange={(e=> setTest2(e.target.value.trim()))} />
+<h1>{test2.length ? 'bor' :'yoq'}</h1>
 
 
 <input type="text" placeholder='text..' className={test1?'green':'red'} onChange={(e)=> setTest1(e.target.value.trim().length >8)} />
